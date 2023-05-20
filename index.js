@@ -16,7 +16,9 @@ app.use(cors());
 app.listen(3030, ()=>console.log('Servidor corriendo'));
 
 
-
+app.get('/',(req,res)=>{
+    res.send('Hola mundo')
+})
 app.use('/usuarios', usuarios)
 app.use('/productos', productos)
 app.use('/transportes', transportes)
