@@ -1,5 +1,4 @@
-// importamos la libreria de mysql
-const mysql = require('mysql')
+const mysql = require('mysql');
 
 
 
