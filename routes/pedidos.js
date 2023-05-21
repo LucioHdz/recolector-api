@@ -73,7 +73,7 @@ pedidos.get('/:id', (req, res) => {
 
 pedidos.delete('/:id', (req, res) => {
     const id = req.params.id
-    db.query(`DELETE FROM pedidios WHERE id_pedido = ${id}`, (err, result) => {
+    db.query(`DELETE FROM pedidos WHERE id_pedido = ${id}`, (err, result) => {
         if (err) {
             res.status(500).json({ message: err.message });
         } else {
