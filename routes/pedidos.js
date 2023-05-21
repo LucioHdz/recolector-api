@@ -3,8 +3,14 @@ const pedidos = require('express').Router();
 const db = require('../database/db');
 
 pedidos.post('/', (req, res) => {
-    const { usuario, producto, cantidad, total, fecha, transporte, contacto } = req.body
-    db.query(`INSERT INTO pedidos VALUE (DEFAULT,${usuario},${producto} ,${cantidad}, ${total}, "${fecha}" ,${transporte}, "${contacto}")`, (err, result) => {
+    const { usuario,
+        producto,
+        cantidad,
+        total,
+        fecha,
+        transporte,
+        contacto } = req.body
+    db.query(`INSERT INTO pedidos VALUE (DEFAULT,${usuario},${producto} ,${cantidad}, ${total},${fecha} ,${transporte}, "${contacto}")`, (err, result) => {
         if (err) {
             res.status(500).json({ message: err.message });
         } else {
