@@ -18,7 +18,7 @@ transportes.post('/', (req,res)=>{
 
 
 transportes.get('/',(req,res)=>{
-    db.query(`SELECT * FROM transportess`,(err,result)=>{
+    db.query(`SELECT * FROM transportes`,(err,result)=>{
         if(err){
             res.status(500).json({message:err.message})
         }else{
